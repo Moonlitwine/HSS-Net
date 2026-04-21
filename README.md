@@ -6,13 +6,8 @@ This is the official PyTorch implementation of the paper **"HSS-Net: Hybrid Stat
 
 ## 🚀 Status
 **[2026-04]** The paper has been accepted by ICMR 2026! 
-**[TODO]** Full code, pre-trained models, and detailed instructions are currently under preparation and will be released soon. Please stay tuned!
+**[TODO]** Full code are currently under preparation and will be released soon. Please stay tuned!
 
-## 📝 TODO List
-- [ ] Release inference code
-- [ ] Release pre-trained models (AllWeather, RainDrop, Snow100K)
-- [ ] Release training scripts
-- [ ] Update detailed documentation
 
 ## 📖 Citation
 If you find our work useful, please consider citing:
