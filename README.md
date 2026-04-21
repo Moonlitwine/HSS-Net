@@ -6,7 +6,7 @@ This is the official PyTorch implementation of the paper **"HSS-Net: Hybrid Stat
 
 ## 🚀 Status
 **[2026-04]** The paper has been accepted by ICMR 2026! 
-**[TODO]** Full code are currently under preparation and will be released soon. Please stay tuned!
+**[TODO]** Full code and detailed instructions are currently under preparation and will be released soon. Please stay tuned!
 
 
 ## 📖 Citation
