@@ -1,0 +1,9 @@
+torch==2.0.1
+torchvision==0.13.0
+einops==0.7.0
+numpy==1.24.3
+opencv_python==4.7.0.72
+Pillow==10.2.0
+PyYAML==6.0.1
+tqdm==4.65.0
+yacs==0.1.8

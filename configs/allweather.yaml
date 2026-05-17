@@ -1,0 +1,65 @@
+config: "allweather.yaml" # Path to the config file
+exp: "exp" # Path for saving running related data
+doc: "doc" # A string for documentation purpose. Will be the name of the log folder.
+resume: "" # Path to the checkpoint file
+verbose: "info" # the logging level of the logger
+seed: 1234 # random seed
+val_folder: "images" # Folder name of verification results
+sample_folder: "./exp_allweather/sample_result" # Location to save restored images
+
+data:
+    dataset: "Allweather"
+    dataset_dir: "./datasets/Allweather" 
+    channels: 3
+    num_workers: 8
+    train_filelist: "" # List of train set files
+    val_filelist: "" # List of validation set files
+    train_num: 18069 # Training set size
+
+model:
+    ema_rate: 0.999
+    ema: True
+
+data_augment:
+    augment: True
+    flip_prob: 0.5
+    scale_prob: 0.0
+    mixup_prob: 0.0
+    around_padding: True
+
+backbone:
+    image_size: 128 # Input patch size during model training
+    channels: 32 # Initial number of channels
+    channels_mult: [1, 2, 4, 8]
+    dropout: 0.05 # Our final model did not use dropout
+
+training:
+    batch_size: 6    # Batch size 6
+    step_size: 280000 
+    snapshot_freq: 10000 # The frequency of save checkpoint
+    validation_freq: 200000 # The frequency of validation
+
+sampling:
+    batch_size: 1
+    patch_num: 12
+    patch_size: 256
+    patch_overlap: 64
+
+optim:
+    weight_decay: 0.000
+    optimizer: "Adam"
+    lr: 0.0004
+    amsgrad: False
+    eps: 0.00000001
+    beta1: 0.9
+
+scheduler:
+    periods: [80000, 80000, 80000]
+    restart_weights: [1, 0.5, 0.25]
+    eta_mins: [0.0004, 0.0002, 0.0001]
+
+loss:
+    depth_weight: 0.0 # Depth loss weight
+    perceptual_weight: 0.1 # Perceptual loss weight
+    ssim_weight: 0.0 # SSIM loss weight
+    pixel_weight: 1.0 # Pixel-wise loss weight
